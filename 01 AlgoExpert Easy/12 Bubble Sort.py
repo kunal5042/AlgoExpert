@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/bubble-sort
+# Sorting
+
 def bubbleSort(array, reverse=False):
 	# Algorithm
 	# Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list,
@@ -22,4 +25,23 @@ def bubbleSort(array, reverse=False):
 		if sorted:
 			return array
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        self.assertEqual(bubbleSort([8, 5, 2, 9, 5, 6, 3]), [2, 3, 5, 5, 6, 8, 9])
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

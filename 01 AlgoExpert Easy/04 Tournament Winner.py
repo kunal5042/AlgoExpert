@@ -1,7 +1,12 @@
+# https://www.algoexpert.io/questions/tournament-winner
+# Arrays
+
 '''
-O(n) Time | O(k) Space: where n is the number of competitions and k is the number of teams
+	# Optimal = O(n) time | O(k) space
+	# where n is the number of competitions and k is the number of teams
 '''
 def tournamentWinner(competitions, results):
+
 	hash = {}
 	best_team = ""
 	best_score = 0
@@ -35,4 +40,27 @@ def tournamentWinner(competitions, results):
 	
 	return best_team
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        competitions = [["HTML", "C#"], ["C#", "Python"], ["Python", "HTML"]]
+        results = [0, 0, 1]
+        expected = "Python"
+        actual = tournamentWinner(competitions, results)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

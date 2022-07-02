@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/find-three-largest-numbers
+# Searching
+
 '''
 O(n*m) Time | O(1) Space: where n is the length of the input array and,
 m is the number of largest elements required
@@ -27,4 +30,23 @@ def findThreeLargestNumbers(array):
     return get_n_largest(array, 3)
 
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        self.assertEqual(findThreeLargestNumbers([141, 1, 17, -7, -17, -27, 18, 541, 8, 7, 7]), [18, 141, 541])
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

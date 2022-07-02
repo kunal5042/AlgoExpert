@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/longest-peak
+# Arrays
+
 def longestPeak(array):
 	return longest_peak(array)
 
@@ -39,4 +42,26 @@ def longest_peak(array):
 	
 	return result
 
+
+import unittest
+
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        array = [1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3]
+        expected = 6
+        self.assertEqual(longestPeak(array), expected)
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

@@ -1,23 +1,6 @@
-import unittest
+# https://www.algoexpert.io/questions/class-photos
+# Greedy Algorithms
 
-
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        try:
-            redShirtHeights = [5, 8, 1, 3, 4]
-            blueShirtHeights = [6, 9, 2, 4, 5]
-            expected = True
-            actual = classPhotos(redShirtHeights, blueShirtHeights)
-            self.assertEqual(actual, expected)
-            print("Test Passed")
-        except:
-            print("Test Failed")
-        
-def classPhotos(redShirtHeights, blueShirtHeights):
-    red = redShirtHeights
-    blue = blueShirtHeights
-    return class_photo_possible(red, blue)
-        
 def class_photo_possible(red, blue):
 	red.sort()
 	blue.sort()
@@ -32,9 +15,35 @@ def class_photo_possible(red, blue):
 				return False
 	
 	return True
+				
+
+def classPhotos(redShirtHeights, blueShirtHeights):
+    red = redShirtHeights
+    blue = blueShirtHeights
+    return class_photo_possible(red, blue)
+
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        redShirtHeights = [5, 8, 1, 3, 4]
+        blueShirtHeights = [6, 9, 2, 4, 5]
+        expected = True
+        actual = classPhotos(redShirtHeights, blueShirtHeights)
+        self.assertEqual(actual, expected)
+
+        print("Test Case: Passed")
 
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
-    
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/caesar-cipher-encryptor
+# Strings
+
 '''
 O(n) Time | O(1) Space: Where n is the length of the input string
 '''
@@ -14,4 +17,23 @@ def caesarCipherEncryptor(string, key):
 	
 	return result
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        self.assertEqual(caesarCipherEncryptor("xyz", 2), "zab")
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''
