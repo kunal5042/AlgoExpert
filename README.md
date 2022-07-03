@@ -119,3 +119,4 @@
 | 🟥 |114 |[ Underscorify Substring](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/34%20Underscorify%20Substring.py)|
 | 🟥 |115 |[ Pattern Matcher](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/35%20Pattern%20Matcher.py)|
 | 🟥 |116 |[ Solve Sudoku](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/36%20Solve%20Sudoku.py)|
+ 
