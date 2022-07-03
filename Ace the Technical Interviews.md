@@ -1,3 +1,6 @@
+![AlgoExpert cover image](https://github.com/das-jishu/algoexpert-data-structures-algorithms/blob/master/Images/algo-expert-cover.png?raw=true)
+[![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://github.com/kunal5042/AlgoExpert)
+[![Generic badge](https://img.shields.io/badge/lang-python-yellow.svg)](https://www.python.org/)
 | Difficulty| No.| Name 
 | :------: | ----------------- | :--------: | 
 | 🟩 |01 |[ Two Number Sum](https://github.com/kunal5042/AlgoExpert/blob/main/01%20AlgoExpert%20Easy/01%20Two%20Number%20Sum.py)|
@@ -80,40 +83,39 @@
 | 🟦 |78 |[ Cycle In Graph](https://github.com/kunal5042/AlgoExpert/blob/main/02%20AlgoExpert%20Medium/53%20Cycle%20In%20Graph.py)|
 | 🟦 |79 |[ Minimum Passes Of Matrix](https://github.com/kunal5042/AlgoExpert/blob/main/02%20AlgoExpert%20Medium/54%20Minimum%20Passes%20Of%20Matrix.py)|
 | 🟦 |80 |[ Suffix Trie Construction](https://github.com/kunal5042/AlgoExpert/blob/main/02%20AlgoExpert%20Medium/55%20Suffix%20Trie%20Construction.py)|
-| 🟥 |81 |[ Largest Range](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard01%20Largest%20Range.py)|
-| 🟥 |82 |[ Quick Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard02%20Quick%20Sort.py)|
-| 🟥 |83 |[ Four Number Sum](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard03%20Four%20Number%20Sum.py)|
-| 🟥 |84 |[ Subarray Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard04%20Subarray%20Sort.py)|
-| 🟥 |85 |[ Min Rewards](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard05%20Min%20Rewards.py)|
-| 🟥 |86 |[ Zigzag Traverse](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard06%20Zigzag%20Traverse.py)|
-| 🟥 |87 |[ Max Path Sum In Binary Tree](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard07%20Max%20Path%20Sum%20In%20Binary%20Tree.py)|
-| 🟥 |88 |[ Find Nodes Distance K](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard08%20Find%20Nodes%20Distance%20K.py)|
-| 🟥 |89 |[ Heap Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard09%20Heap%20Sort.py)|
-| 🟥 |90 |[ Radix Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard10%20Radix%20Sort.py)|
-| 🟥 |91 |[ Same BSTs](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard11%20Same%20BSTs.py)|
-| 🟥 |92 |[ Validate Three Nodes](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard12%20Validate%20Three%20Nodes.py)|
-| 🟥 |93 |[ Longest Substring Without Duplication](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard13%20Longest%20Substring%20Without%20Duplication.py)|
-| 🟥 |94 |[ Continuous Median](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard14%20Continuous%20Median.py)|
-| 🟥 |95 |[ Dijkstra's Algorithm](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard15%20Dijkstra's%20Algorithm.py)|
-| 🟥 |96 |[ Topological Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard16%20Topological%20Sort.py)|
-| 🟥 |97 |[ Find Loop](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard17%20Find%20Loop.py)|
-| 🟥 |98 |[ Merge Linked Lists](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard18%20Merge%20Linked%20Lists.py)|
-| 🟥 |99 |[ Reverse Linked List](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard19%20Reverse%20Linked%20List.py)|
-| 🟥 |100 |[ Max Sum Increasing Subsequence](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard20%20Max%20Sum%20Increasing%20Subsequence.py)|
-| 🟥 |101 |[ Shorten Path](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard21%20Shorten%20Path.py)|
-| 🟥 |102 |[ Longest Common Subsequence](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard22%20Longest%20Common%20Subsequence.py)|
-| 🟥 |103 |[ Min Number Of Jumps](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard23%20Min%20Number%20Of%20Jumps.py)|
-| 🟥 |104 |[ Water Area](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard24%20Water%20Area.py)|
-| 🟥 |105 |[ Knapsack Problem](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard25%20Knapsack%20Problem.py)|
-| 🟥 |106 |[ Maximize Expression](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard26%20Maximize%20Expression.py)|
-| 🟥 |107 |[ Sort K-Sorted Array](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard27%20Sort%20K-Sorted%20Array.py)|
-| 🟥 |108 |[ Shift Linked List](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard28%20Shift%20Linked%20List.py)|
-| 🟥 |109 |[ Shifted Binary Search](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard29%20Shifted%20Binary%20Search.py)|
-| 🟥 |110 |[ Search For Range](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard30%20Search%20For%20Range.py)|
-| 🟥 |111 |[ Quickselect](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard31%20Quickselect.py)|
-| 🟥 |112 |[ Index Equals Value](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard32%20Index%20Equals%20Value.py)|
-| 🟥 |113 |[ Boggle Board](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard33%20Boggle%20Board.py)|
-| 🟥 |114 |[ Underscorify Substring](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard34%20Underscorify%20Substring.py)|
-| 🟥 |115 |[ Pattern Matcher](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard35%20Pattern%20Matcher.py)|
-| 🟥 |116 |[ Solve Sudoku](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard36%20Solve%20Sudoku.py)|
-
+| 🟥 |81 |[ Largest Range](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/01%20Largest%20Range.py)|
+| 🟥 |82 |[ Quick Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/02%20Quick%20Sort.py)|
+| 🟥 |83 |[ Four Number Sum](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/03%20Four%20Number%20Sum.py)|
+| 🟥 |84 |[ Subarray Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/04%20Subarray%20Sort.py)|
+| 🟥 |85 |[ Min Rewards](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/05%20Min%20Rewards.py)|
+| 🟥 |86 |[ Zigzag Traverse](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/06%20Zigzag%20Traverse.py)|
+| 🟥 |87 |[ Max Path Sum In Binary Tree](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/07%20Max%20Path%20Sum%20In%20Binary%20Tree.py)|
+| 🟥 |88 |[ Find Nodes Distance K](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/08%20Find%20Nodes%20Distance%20K.py)|
+| 🟥 |89 |[ Heap Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/09%20Heap%20Sort.py)|
+| 🟥 |90 |[ Radix Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/10%20Radix%20Sort.py)|
+| 🟥 |91 |[ Same BSTs](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/11%20Same%20BSTs.py)|
+| 🟥 |92 |[ Validate Three Nodes](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/12%20Validate%20Three%20Nodes.py)|
+| 🟥 |93 |[ Longest Substring Without Duplication](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/13%20Longest%20Substring%20Without%20Duplication.py)|
+| 🟥 |94 |[ Continuous Median](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/14%20Continuous%20Median.py)|
+| 🟥 |95 |[ Dijkstra's Algorithm](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/15%20Dijkstra's%20Algorithm.py)|
+| 🟥 |96 |[ Topological Sort](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/16%20Topological%20Sort.py)|
+| 🟥 |97 |[ Find Loop](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/17%20Find%20Loop.py)|
+| 🟥 |98 |[ Merge Linked Lists](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/18%20Merge%20Linked%20Lists.py)|
+| 🟥 |99 |[ Reverse Linked List](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/19%20Reverse%20Linked%20List.py)|
+| 🟥 |100 |[ Max Sum Increasing Subsequence](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/20%20Max%20Sum%20Increasing%20Subsequence.py)|
+| 🟥 |101 |[ Shorten Path](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/21%20Shorten%20Path.py)|
+| 🟥 |102 |[ Longest Common Subsequence](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/22%20Longest%20Common%20Subsequence.py)|
+| 🟥 |103 |[ Min Number Of Jumps](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/23%20Min%20Number%20Of%20Jumps.py)|
+| 🟥 |104 |[ Water Area](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/24%20Water%20Area.py)|
+| 🟥 |105 |[ Knapsack Problem](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/25%20Knapsack%20Problem.py)|
+| 🟥 |106 |[ Maximize Expression](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/26%20Maximize%20Expression.py)|
+| 🟥 |107 |[ Sort K-Sorted Array](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/27%20Sort%20K-Sorted%20Array.py)|
+| 🟥 |108 |[ Shift Linked List](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/28%20Shift%20Linked%20List.py)|
+| 🟥 |109 |[ Shifted Binary Search](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/29%20Shifted%20Binary%20Search.py)|
+| 🟥 |110 |[ Search For Range](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/30%20Search%20For%20Range.py)|
+| 🟥 |111 |[ Quickselect](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/31%20Quickselect.py)|
+| 🟥 |112 |[ Index Equals Value](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/32%20Index%20Equals%20Value.py)|
+| 🟥 |113 |[ Boggle Board](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/33%20Boggle%20Board.py)|
+| 🟥 |114 |[ Underscorify Substring](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/34%20Underscorify%20Substring.py)|
+| 🟥 |115 |[ Pattern Matcher](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/35%20Pattern%20Matcher.py)|
+| 🟥 |116 |[ Solve Sudoku](https://github.com/kunal5042/AlgoExpert/blob/main/03%20AlgoExpert%20Hard/36%20Solve%20Sudoku.py)|
