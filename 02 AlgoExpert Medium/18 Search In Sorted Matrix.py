@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/search-in-sorted-matrix
+# Sorting
+
 '''
 O(n+m) Time | O(1) Space: where n is the length of the matrix's rows and,
 m is the length of the matrix's columns
@@ -24,6 +27,7 @@ def searchInSortedMatrix(matrix, target):
 	return [-1, -1]
 
 
+
 import unittest
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
@@ -38,9 +42,16 @@ class TestProgram(unittest.TestCase):
         self.assertEqual(actual, [3, 3])
         print("Test Case: Passed")
 
-        
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
-    
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

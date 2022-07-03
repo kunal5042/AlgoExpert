@@ -1,10 +1,12 @@
-import unittest
+# https://www.algoexpert.io/questions/single-cycle-check
+# Graphs
 
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        self.assertEqual(hasSingleCycle([2, 3, 1, -4, -4, 2]), True)
-        print("Test Case: Passed")
-        
+'''
+LOGIC:
+We are checking below two conditions to determine if we have a single cycle or not.
+    1. We are not getting back at the STARTING_IDX before visiting len(array) elements
+    2. After visiting len(array) elements if we are back at STARTING_IDX or not
+'''
 def hasSingleCycle(array):
     visited_count = 0
     
@@ -27,16 +29,24 @@ def hasSingleCycle(array):
     return True if current_idx == STARTING_IDX else False
 
 
-'''
-LOGIC:
-We are checking below two conditions to determine if we have a single cycle or not.
-    1. We are not getting back at the STARTING_IDX before visiting len(array) elements
-    2. After visiting len(array) elements if we are back at STARTING_IDX or not
-'''
 
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        self.assertEqual(hasSingleCycle([2, 3, 1, -4, -4, 2]), True)
+        print("Test Case: Passed")
 
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
+'''
 
-# Kunal Wadhwa  
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

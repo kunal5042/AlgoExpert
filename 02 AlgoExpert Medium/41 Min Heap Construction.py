@@ -1,32 +1,11 @@
-import unittest
+# https://www.algoexpert.io/questions/min-heap-construction
+# Heaps
 
-def isMinHeapPropertySatisfied(array):
-    for currentIdx in range(1, len(array)):
-        parentIdx = (currentIdx - 1) // 2
-        if array[parentIdx] > array[currentIdx]:
-            return False
-    return True
-
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        minHeap = MinHeap([48, 12, 24, 7, 8, -5, 24, 391, 24, 56, 2, 6, 8, 41])
-        minHeap.insert(76)
-        self.assertTrue(isMinHeapPropertySatisfied(minHeap.heap))
-        self.assertEqual(minHeap.peek(), -5)
-        self.assertEqual(minHeap.remove(), -5)
-        self.assertTrue(isMinHeapPropertySatisfied(minHeap.heap))
-        self.assertEqual(minHeap.peek(), 2)
-        self.assertEqual(minHeap.remove(), 2)
-        self.assertTrue(isMinHeapPropertySatisfied(minHeap.heap))
-        self.assertEqual(minHeap.peek(), 6)
-        minHeap.insert(87)
-        self.assertTrue(isMinHeapPropertySatisfied(minHeap.heap))
-        print("Test Case: Passed")
-        
 class MinHeap:
     def __init__(self, array):
         self.heap = self.buildHeap(array)
 
+    '''O(n) Time'''
     def buildHeap(self, array):
         # start with first parent that exists
         first_parent = (len(array) - 1) // 2
@@ -36,6 +15,7 @@ class MinHeap:
             self.siftDown(parent, len(array)-1, array)
         return array
 
+    '''O(log(n)) Time'''
     def siftDown(self, cidx, endidx, heap):
         child_one_idx = cidx * 2 + 1
         # is child one a valid idx or does child one exist?
@@ -64,7 +44,8 @@ class MinHeap:
                 # if current node is smaller than both of it's children
                 # we can stop, no need to sift down
                 break
-
+                
+    '''O(log(n)) Time'''
     def siftUp(self, idx, heap):
         parent_idx = (idx  - 1) // 2
         # while idx > 0, because we can't siftUp root node
@@ -76,10 +57,12 @@ class MinHeap:
             idx = parent_idx
             parent_idx = (idx - 1) // 2
 
+    '''O(1) Time'''
     def peek(self):
         # return the minimum of heap
         return self.heap[0]
 
+    '''O(log(n)) Time'''
     def remove(self):
         # swap the last node with the root
         self.swap(0, len(self.heap)-1, self.heap)
@@ -90,19 +73,56 @@ class MinHeap:
         # return the minimum value
         return min_value
 
+    '''O(log(n)) Time'''
     def insert(self, value):
         # insert the value at the end of the heap as the last node
         self.heap.append(value)
         # sift the value up to it's correct position
         self.siftUp(len(self.heap)-1, self.heap)
 
+    '''O(1) Time'''
     def swap(self, idx1, idx2, heap):
         # basic swap function
         heap[idx1], heap[idx2] = heap[idx2], heap[idx1]
-        
+
+
+
+import unittest
+def isMinHeapPropertySatisfied(array):
+    for currentIdx in range(1, len(array)):
+        parentIdx = (currentIdx - 1) // 2
+        if array[parentIdx] > array[currentIdx]:
+            return False
+    return True
+
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        minHeap = MinHeap([48, 12, 24, 7, 8, -5, 24, 391, 24, 56, 2, 6, 8, 41])
+        minHeap.insert(76)
+        self.assertTrue(isMinHeapPropertySatisfied(minHeap.heap))
+        self.assertEqual(minHeap.peek(), -5)
+        self.assertEqual(minHeap.remove(), -5)
+        self.assertTrue(isMinHeapPropertySatisfied(minHeap.heap))
+        self.assertEqual(minHeap.peek(), 2)
+        self.assertEqual(minHeap.remove(), 2)
+        self.assertTrue(isMinHeapPropertySatisfied(minHeap.heap))
+        self.assertEqual(minHeap.peek(), 6)
+        minHeap.insert(87)
+        self.assertTrue(isMinHeapPropertySatisfied(minHeap.heap))
+
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
+    test = TestProgram()
+    test.test_case_1()
+'''
 
 # Kunal Wadhwa
 
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

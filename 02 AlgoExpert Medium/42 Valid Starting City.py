@@ -1,15 +1,5 @@
-import unittest
-
-
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        distances = [5, 25, 15, 10, 15]
-        fuel = [1, 2, 1, 0, 3]
-        mpg = 10
-        expected = 4
-        actual = validStartingCity(distances, fuel, mpg)
-        self.assertEqual(actual, expected)
-        print("Test Case: Passed")
+# https://www.algoexpert.io/questions/valid-starting-city
+# Greedy Algorithms
 
 def validStartingCity(distances, fuel, mpg):
 	cities = len(distances)
@@ -34,8 +24,30 @@ def validStartingCity(distances, fuel, mpg):
 	
 	return result["Valid City"]
 
+
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        distances = [5, 25, 15, 10, 15]
+        fuel = [1, 2, 1, 0, 3]
+        mpg = 10
+        expected = 4
+        actual = validStartingCity(distances, fuel, mpg)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
+    test = TestProgram()
+    test.test_case_1()
+'''
 
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

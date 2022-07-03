@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/reverse-words-in-string
+# Strings
+
 '''
 O(n) Time | O(n) Space: where n is the length of the input string
 '''
@@ -30,4 +33,27 @@ def reverseWordsInString(string):
 		
 	return result
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        input = "AlgoExpert is the best!"
+        expected = "best! the is AlgoExpert"
+        actual = reverseWordsInString(input)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

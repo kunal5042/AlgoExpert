@@ -1,9 +1,13 @@
-import unittest
-from colorama import Fore
+# https://www.algoexpert.io/questions/min-height-bst
+# Binary Search Trees
 
 def minHeightBst(array):
     return create(array, None, 0, len(array)-1)
 
+# Algorithm
+# Insert the middle element from the array
+# That will divide the array into two equal parts
+# Recursively insert middle element from both those parts and so on
 def create(array, root, start, end):
 	if end < start:
 		return
@@ -21,6 +25,8 @@ def create(array, root, start, end):
 	return root
 
 
+
+import unittest
 class BST:
     def __init__(self, value):
         self.value = value
@@ -38,7 +44,7 @@ class BST:
                 self.right = BST(value)
             else:
                 self.right.insert(value)
-				
+
 def inOrderTraverse(tree, array):
     if tree is not None:
         inOrderTraverse(tree.left, array)
@@ -72,22 +78,25 @@ class TestProgram(unittest.TestCase):
     def test_case_1(self):
         array = [1, 2, 5, 7, 10, 13, 14, 15, 22]
         tree = minHeightBst(array)
-        
-        try:
-            self.assertTrue(validateBst(tree))
-            self.assertEqual(getTreeHeight(tree), 4)
 
-            inOrder = inOrderTraverse(tree, [])
+        self.assertTrue(validateBst(tree))
+        self.assertEqual(getTreeHeight(tree), 4)
 
-            self.assertEqual(inOrder, [1, 2, 5, 7, 10, 13, 14, 15, 22])
+        inOrder = inOrderTraverse(tree, [])
 
-            print(Fore.GREEN + f'\nTest Case: Passed\n')
-        except:
-            print(Fore.RED + f'\nTest Case: Failed\n')
-
+        self.assertEqual(inOrder, [1, 2, 5, 7, 10, 13, 14, 15, 22])
+        print("Test Case: Passed")
 
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
+    test = TestProgram()
+    test.test_case_1()
+'''
 
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

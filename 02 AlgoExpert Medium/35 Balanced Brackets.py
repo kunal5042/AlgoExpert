@@ -1,11 +1,5 @@
-import unittest
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        self.assertEqual(balancedBrackets("([])(){}(())()()"), True)
-        print("Test Passed")
-
-def balancedBrackets(string):
-	return balanced_brackets(string)
+# https://www.algoexpert.io/questions/balanced-brackets
+# Stacks
 
 def match(open, close):
 	if open == '(' and close == ')':
@@ -16,25 +10,39 @@ def match(open, close):
 		return True
 	return False
 
-def balanced_brackets(string):
+def balancedBrackets(string):
 	stack = []
 	for bracket in string:
 		if bracket == '(' or bracket == '{' or bracket == '[':
 			stack.append(bracket)
 		
 		if bracket == ')' or bracket == '}' or bracket == ']':
-			if len(stack) == 0:
-				return False
-			if not match(stack.pop(), bracket):
+			if not len(stack) or not match(stack.pop(), bracket):
 				return False
 	
 	if len(stack) == 0:
 		return True
-	else:
-		return False
+	return False
+
+    
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        self.assertEqual(balancedBrackets("([])(){}(())()()"), True)
+        print("Test Case: Passed")
 
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
-    
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

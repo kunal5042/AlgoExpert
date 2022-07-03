@@ -1,14 +1,5 @@
-import unittest
-
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        buildings = [3, 5, 4, 4, 3, 1, 3, 2]
-        direction = "EAST"
-        expected = [1, 3, 6, 7]
-        actual = sunsetViews(buildings, direction)
-        self.assertEqual(actual, expected)
-        print("Test Passed")
-        
+# https://www.algoexpert.io/questions/sunset-views
+# Stacks
 
 def sunsetViews(buildings, direction):
     return sunset_views(buildings, direction)
@@ -39,9 +30,29 @@ def sunset_views(buildings, direction):
 	
 	return result
 
+    
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        buildings = [3, 5, 4, 4, 3, 1, 3, 2]
+        direction = "EAST"
+        expected = [1, 3, 6, 7]
+        actual = sunsetViews(buildings, direction)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
 
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
-    
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

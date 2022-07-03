@@ -1,14 +1,10 @@
-import unittest
+# https://www.algoexpert.io/questions/river-sizes
+# Graphs
 
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        testInput = [[1, 0, 0, 1, 0], [1, 0, 1, 0, 0], [0, 0, 1, 0, 1], [1, 0, 1, 0, 1], [1, 0, 1, 1, 0]]
-        expected = [1, 2, 2, 2, 5]
-        self.assertEqual(sorted(riverSizes(testInput)), expected)
-        print("Test Case: Passed")
-        
-
-'''O(wh) Time and O(wh) Space: where w is the width and h is the height of the given matrix'''
+'''
+   O(wh) Time and O(wh) Space
+   BFS Solution
+'''
 def riverSizes(matrix):
     (width, height) = (len(matrix[0]), len(matrix))
     # to keep track of visited cells in the matrix
@@ -64,6 +60,67 @@ def riverSizes(matrix):
 
     return result
 
+'''Another Solution'''
+# GLOBAL VARIABLE
+river_size = 0
+def riverSizes(matrix):
+	visited = [[False for value in row] for row in matrix]
+	result = []
+	
+	for row_no, row_list in enumerate(matrix):
+		for col_no, value_in_row in enumerate(matrix[row_no]):
+			if not visited[row_no][col_no]:
+				if matrix[row_no][col_no] == 1:
+					global river_size
+					river_size = 1
+					visited[row_no][col_no] = True
+					found_a_one(row_no, col_no, matrix, visited)
+					result.append(river_size)
+	return result
+			
+
+
+def found_a_one(row_number, col_number, matrix, visited):
+	global river_size
+	up_index = row_number - 1 if row_number - 1 >= 0 else None
+	down_index = row_number + 1 if row_number + 1 < len(matrix) else None
+	left_index = col_number - 1 if col_number - 1 >= 0 else None
+	right_index = col_number + 1 if col_number + 1 < len(matrix[row_number]) else None
+	go_up, go_down, go_left, go_right = False, False, False, False
+	
+	if up_index is not None:
+		# visit the element 
+		if not visited[up_index][col_number]:
+			visited[up_index][col_number] = True
+			if matrix[up_index][col_number] == 1:
+				river_size += 1
+				print(f'Visited [{up_index}][{col_number}]: Size = {river_size}')
+				found_a_one(up_index, col_number, matrix, visited)
+	
+	if down_index is not None:
+		if not visited[down_index][col_number]:
+			visited[down_index][col_number] = True
+			if matrix[down_index][col_number] == 1:
+				river_size += 1
+				print(f'Visited [{down_index}][{col_number}]: Size = {river_size}')
+				found_a_one(down_index, col_number, matrix, visited)
+	
+	if left_index is not None:
+		if not visited[row_number][left_index]:
+			visited[row_number][left_index] = True
+			if matrix[row_number][left_index] == 1:
+				river_size += 1
+				print(f'Visited [{row_number}][{left_index}]: Size = {river_size}')
+				found_a_one(row_number, left_index, matrix, visited)
+				
+	if right_index is not None:
+		if not visited[row_number][right_index]:
+			visited[row_number][right_index] = True
+			if matrix[row_number][right_index] == 1:
+				river_size += 1
+				print(f'Visited [{row_number}][{right_index}]: Size = {river_size}')
+				found_a_one(row_number, right_index, matrix, visited)	
+
 
 def get_adjacents(result, x, y, height, width):
     if x - 1 >= 0:
@@ -74,9 +131,27 @@ def get_adjacents(result, x, y, height, width):
         result.append((x, y-1))
     if y + 1 < width:
         result.append((x, y+1))
+                            
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        testInput = [[1, 0, 0, 1, 0], [1, 0, 1, 0, 0], [0, 0, 1, 0, 1], [1, 0, 1, 0, 1], [1, 0, 1, 1, 0]]
+        expected = [1, 2, 2, 2, 5]
+        self.assertEqual(sorted(riverSizes(testInput)), expected)
+        print("Test Case: Passed")
 
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
+'''
 
-# Kunal Wadhwa  
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

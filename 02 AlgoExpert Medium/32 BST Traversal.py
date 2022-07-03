@@ -1,13 +1,6 @@
-import unittest
-from colorama import Fore
+# https://www.algoexpert.io/questions/bst-traversal
+# Binary Search Trees
 
-
-class BST:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
-        
 def inOrderTraverse(tree, array):
 	inorder(tree, array)
 	return array
@@ -41,6 +34,16 @@ def post_order(tree, array):
 	post_order(tree.right, array)
 	array.append(tree.value)
 	
+	
+
+
+import unittest
+class BST:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
 
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
@@ -55,18 +58,22 @@ class TestProgram(unittest.TestCase):
         inOrder = [1, 2, 5, 5, 10, 15, 22]
         preOrder = [10, 5, 2, 1, 5, 15, 22]
         postOrder = [1, 2, 5, 5, 22, 15, 10]
-        
-        try:
-            self.assertEqual(inOrderTraverse(root, []), inOrder)
-            self.assertEqual(preOrderTraverse(root, []), preOrder)
-            self.assertEqual(postOrderTraverse(root, []), postOrder)
-            print(Fore.GREEN + f'\nTest Case: Passed\n')
-        except:
-            print(Fore.RED + f'\nTest Case: Failed\n')
 
+        self.assertEqual(inOrderTraverse(root, []), inOrder)
+        self.assertEqual(preOrderTraverse(root, []), preOrder)
+        self.assertEqual(postOrderTraverse(root, []), postOrder)
+        print("Test Case: Passed")
 
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
-    
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

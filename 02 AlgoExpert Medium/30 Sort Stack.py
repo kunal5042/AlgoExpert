@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/sort-stack
+# Stacks
+
 def sortStack(stack):
 	if len(stack):
 		# pop out all the elements until the stack is empty
@@ -40,4 +43,27 @@ def insert(stack, ele):
 		insert(stack, ele)
 	stack.append(popped)
 	
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        input = [-5, 2, -2, 4, 3, 1]
+        expected = [-5, -2, 1, 2, 3, 4]
+        actual = sortStack(input)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

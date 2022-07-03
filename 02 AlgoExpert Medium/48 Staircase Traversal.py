@@ -1,14 +1,6 @@
-import unittest
+# https://www.algoexpert.io/questions/staircase-traversal
+# Recursion
 
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        stairs = 4
-        maxSteps = 2
-        expected = 5
-        actual = staircaseTraversal(stairs, maxSteps)
-        self.assertEqual(actual, expected)
-        print("Test Case: Passed")
-        
 def staircaseTraversal(height, maxSteps):
     # to store the number of ways we can reach every step between height (0 to given height)
     ways = [None for x in range(height+1)]
@@ -40,8 +32,29 @@ def staircaseTraversal(height, maxSteps):
     # return the number of ways calculated for the given height
     return ways[-1]
 
+
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        stairs = 4
+        maxSteps = 2
+        expected = 5
+        actual = staircaseTraversal(stairs, maxSteps)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
+'''
 
-# Kunal Wadhwa  
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

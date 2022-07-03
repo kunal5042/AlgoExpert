@@ -1,16 +1,8 @@
-import unittest
+# https://www.algoexpert.io/questions/number-of-ways-to-traverse-graph
+# Dynamic Programming
 
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        width = 4
-        height = 3
-        expected = 10
-        actual = numberOfWaysToTraverseGraphDP(width, height)
-        self.assertEqual(actual, expected)
-        print("Test Case: Passed")
-        
 '''Dynamic Programming Solution'''
-def numberOfWaysToTraverseGraphDP(width, height):
+def numberOfWaysToTraverseGraph(width, height):
     # reason for plus 1 is that we don't run into an index error
     # and we don't have to check if x - 1 or y -1 is within bounds for top row and first column
     num_ways = [[0 for _ in range(width+1)] for _ in range(height+1)]
@@ -62,8 +54,29 @@ def numberOfWaysToTraverseGraph(width, height):
     print(width, height, grid_info.RC)
     return grid_info.ways
 
+
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        width = 4
+        height = 3
+        expected = 10
+        actual = numberOfWaysToTraverseGraph(width, height)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
+'''
 
-# Kunal Wadhwa  
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

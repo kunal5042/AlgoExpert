@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/find-successor
+# Binary Trees
+
 # This is an input class. Do not edit.
 class BinaryTree:
     def __init__(self, value, left=None, right=None, parent=None):
@@ -43,4 +46,38 @@ def right_most_parent(node):
 		curr = curr.parent
 	return curr.parent
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        root = BinaryTree(1)
+        root.left = BinaryTree(2)
+        root.left.parent = root
+        root.right = BinaryTree(3)
+        root.right.parent = root
+        root.left.left = BinaryTree(4)
+        root.left.left.parent = root.left
+        root.left.right = BinaryTree(5)
+        root.left.right.parent = root.left
+        root.left.left.left = BinaryTree(6)
+        root.left.left.left.parent = root.left.left
+        node = root.left.right
+        expected = root
+        actual = findSuccessor(root, node)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

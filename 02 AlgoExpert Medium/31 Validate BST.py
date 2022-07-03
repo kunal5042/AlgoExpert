@@ -1,25 +1,29 @@
-import unittest
-from colorama import Fore
+# https://www.algoexpert.io/questions/validate-bst
+# Binary Search Trees
 
+def validate_bst(root, lower_bound=float('-inf'), upper_bound=float('inf')):
+	if root is None:
+		return True
+	
+	if root.value >= upper_bound or root.value < lower_bound:
+		return False
+		
+	left_is_binary = validate_bst(root.left, lower_bound, root.value)
+	right_is_binary = validate_bst(root.right, root.value, upper_bound)
+	
+	return left_is_binary and right_is_binary
+	
+def validateBst(tree):
+	return validate_bst(tree)
+
+
+
+import unittest
 class BST:
     def __init__(self, value):
         self.value = value
         self.left = None
         self.right = None
-
-
-def validateBst(tree):
-    return is_valid(tree.left, float('-inf'), tree.value) and is_valid(tree.right, tree.value, float('inf'))
-
-
-def is_valid(node, lower, upper):
-    if node is None:
-        return True
-    
-    if node.value < lower or node.value >= upper:
-        return False
-    
-    return is_valid(node.left, lower, node.value) and is_valid(node.right, node.value, upper)
 
 
 class TestProgram(unittest.TestCase):
@@ -33,20 +37,19 @@ class TestProgram(unittest.TestCase):
         root.right.left = BST(13)
         root.right.left.right = BST(14)
         root.right.right = BST(22)
-        try:
-            self.assertEqual(validateBst(root), True)
-            print(Fore.GREEN + f'\nTest Case: Passed\n')
-        except:
-            print(Fore.RED + f'\nTest Case: Failed\n')
-
+        self.assertEqual(validateBst(root), True)
+        print("Test Case: Passed")
 
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
-    
-    
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
 
-	
-	
-	
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

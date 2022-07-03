@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/sum-of-linked-lists
+# Linked Lists
+
 # This is an input class. Do not edit.
 class LinkedList:
     def __init__(self, value):
@@ -58,3 +61,50 @@ def sum_of_linked_list(list1, list2):
 			return list2
 		else:
 			return list1
+
+
+
+
+import unittest
+class LinkedList(LinkedList):
+    def addMany(self, values):
+        current = self
+        while current.next is not None:
+            current = current.next
+        for value in values:
+            current.next = LinkedList(value)
+            current = current.next
+        return self
+
+
+def getNodesInArray(output):
+    nodes = []
+    current = output
+    while current is not None:
+        nodes.append(current.value)
+        current = current.next
+    return nodes
+
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        ll1 = LinkedList(2).addMany([4, 7, 1])
+        ll2 = LinkedList(9).addMany([4, 5])
+        expected = LinkedList(1).addMany([9, 2, 2])
+        actual = sumOfLinkedLists(ll1, ll2)
+        self.assertEqual(getNodesInArray(actual), getNodesInArray(expected))
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

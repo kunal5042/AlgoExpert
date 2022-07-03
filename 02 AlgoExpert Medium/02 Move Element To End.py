@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/move-element-to-end
+# Arrays
+
 def moveElementToEnd(array, toMove):
 	return move_to_end(array, toMove)
 
@@ -16,6 +19,8 @@ def move_to_end(array, to_move):
 			to_put_at +=1
 	return array
 
+
+
 import unittest
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
@@ -33,11 +38,9 @@ class TestProgram(unittest.TestCase):
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
-
 '''
 
-Kunal Wadhwa
-
+# Kunal Wadhwa
 # GitHub     : https://github.com/kunal5042
 # LeetCode   : https://leetcode.com/kunal5042/
 # HackerRank : https://www.hackerrank.com/kunalwadhwa_cs

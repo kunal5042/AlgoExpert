@@ -1,18 +1,12 @@
-import random
+# https://www.algoexpert.io/questions/binary-tree-diameter
+# Binary Trees
+
 class BinaryTree:
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
 
-def binaryTreeDiameter(tree):
-	if tree is not None:
-		if random.randint(0,1) == 1:
-			return binary_tree_diameter(tree)
-		else:
-			return get_tree_info(tree).diam
-	return -1
-	
 '''Recursive Solution 1'''
 def binary_tree_diameter(root, diameter=0):
 	if root is None: return diameter
@@ -28,6 +22,9 @@ def max_height(root, height=0):
 	return max(max_height(root.left, height), max_height(root.right, height))
 
 '''Recursive Solution 2'''
+def binaryTreeDiameter(root):
+    return get_tree_info(root).diam
+
 def get_tree_info(root):
 	if root is None: return TreeInfo(0, 0)
 
@@ -46,4 +43,35 @@ class TreeInfo:
 		self.diam = diam
 		self.height = height
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        root = BinaryTree(1)
+        root.left = BinaryTree(3)
+        root.left.left = BinaryTree(7)
+        root.left.left.left = BinaryTree(8)
+        root.left.left.left.left = BinaryTree(9)
+        root.left.right = BinaryTree(4)
+        root.left.right.right = BinaryTree(5)
+        root.left.right.right.right = BinaryTree(6)
+        root.right = BinaryTree(2)
+        expected = 6
+        actual = binaryTreeDiameter(root)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

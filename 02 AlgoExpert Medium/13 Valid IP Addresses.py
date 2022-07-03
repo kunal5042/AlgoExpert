@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/valid-ip-addresses
+# Strings
+
 '''
 O(1) Time | O(1) Space
 '''
@@ -33,4 +36,39 @@ def valid(part):
 	
 	return True
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        input = "1921680"
+        expected = [
+            "1.9.216.80",
+            "1.92.16.80",
+            "1.92.168.0",
+            "19.2.16.80",
+            "19.2.168.0",
+            "19.21.6.80",
+            "19.21.68.0",
+            "19.216.8.0",
+            "192.1.6.80",
+            "192.1.68.0",
+            "192.16.8.0",
+        ]
+        actual = validIPAddresses(input)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

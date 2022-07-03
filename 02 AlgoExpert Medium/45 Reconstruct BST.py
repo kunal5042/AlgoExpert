@@ -1,29 +1,5 @@
-import unittest
-
-def getDfsOrder(node, values):
-    if node is None:
-        return
-    values.append(node.value)
-    getDfsOrder(node.left, values)
-    getDfsOrder(node.right, values)
-    return values
-
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        preOrderTraversalValues = [10, 4, 2, 1, 3, 17, 19, 18]
-        tree = BST(10)
-        tree.left = BST(4)
-        tree.left.left = BST(2)
-        tree.left.left.left = BST(1)
-        tree.left.right = BST(3)
-        tree.right = BST(17)
-        tree.right.right = BST(19)
-        tree.right.right.left = BST(18)
-        expected = getDfsOrder(tree, [])
-        actual = reconstructBst(preOrderTraversalValues)
-        actualDfsOrder = getDfsOrder(actual, [])
-        self.assertEqual(actualDfsOrder, expected)
-        print("Test Case: Passed")
+# https://www.algoexpert.io/questions/reconstruct-bst
+# Binary Search Trees
 
 class BST:
     def __init__(self, value, left=None, right=None):
@@ -60,8 +36,48 @@ def reconstruct_bst_from_range(lower_bound, upper_bound, preOrderTraversalValues
     
     return BST(root_value, left_subtree, right_subtree)
 
+
+
+import unittest
+BST = BST
+
+
+def getDfsOrder(node, values):
+    if node is None:
+        return
+    values.append(node.value)
+    getDfsOrder(node.left, values)
+    getDfsOrder(node.right, values)
+    return values
+
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        preOrderTraversalValues = [10, 4, 2, 1, 3, 17, 19, 18]
+        tree = BST(10)
+        tree.left = BST(4)
+        tree.left.left = BST(2)
+        tree.left.left.left = BST(1)
+        tree.left.right = BST(3)
+        tree.right = BST(17)
+        tree.right.right = BST(19)
+        tree.right.right.left = BST(18)
+        expected = getDfsOrder(tree, [])
+        actual = reconstructBst(preOrderTraversalValues)
+        actualDfsOrder = getDfsOrder(actual, [])
+        self.assertEqual(actualDfsOrder, expected)
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
+'''
 
-# Kunal Wadhwa  
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

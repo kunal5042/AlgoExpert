@@ -1,14 +1,9 @@
-import unittest
+# https://www.algoexpert.io/questions/cycle-in-graph
+# Graphs
 
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        input = [[1, 3], [2, 3, 4], [0], [], [2, 5], []]
-        expected = True
-        actual = cycleInGraph(input)
-        self.assertEqual(actual, expected)
-        print("Test Case: Passed")
-        
-'''SOLUTION-1'''
+'''Solution - 1'''
+'''O(v + e) time | O(v) space - where v is the number of vertices and e is the number of edges in the graph'''
+
 def cycleInGraph(edges):
     num_nodes          = len(edges)
     visited            = [False for _ in range(num_nodes)]
@@ -50,13 +45,15 @@ def is_node_in_cycle(edges, node, visited, currently_in_stack):
     currently_in_stack[node] = False
     return False
 
-'''SOLUTION-2'''
+
+'''Solution - 2'''
+'''O(v + e) time | O(v) space - where v is the number of vertices and e is the number of edges in the graph'''
 # WHITE - not visited
 # GREY  - currently in stack
 # BLACK - visited and not in stack
 WHITE, GREY, BLACK = 0, 1, 2
 
-def cycleInGraph2(edges):
+def cycleInGraph(edges):
     num_nodes          = len(edges)
     colors             = [WHITE for _ in range(num_nodes)]
 
@@ -95,8 +92,26 @@ def traverse_and_color_nodes(node, edges, colors):
     return False
         
 
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        input = [[1, 3], [2, 3, 4], [0], [], [2, 5], []]
+        expected = True
+        actual = cycleInGraph(input)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
+'''
 
-# Kunal Wadhwa  
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

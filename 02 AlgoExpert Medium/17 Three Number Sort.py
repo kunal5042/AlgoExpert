@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/three-number-sort
+# Sorting
+
 '''
 O(n) Time | O(1) Space: where n is the length of the input array
 '''
@@ -28,4 +31,28 @@ def threeNumberSort(array, order):
 		
 	return array
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        array = [1, 0, 0, -1, -1, 0, 1, 1]
+        order = [0, 1, -1]
+        expected = [0, 0, 0, 1, 1, 1, -1, -1]
+        actual = threeNumberSort(array, order)
+        self.assertEqual(actual, expected)
+        print("Test Case: Passed")
+
+if __name__ == "__main__":
+    test = TestProgram()
+    test.test_case_1()
+'''
+
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

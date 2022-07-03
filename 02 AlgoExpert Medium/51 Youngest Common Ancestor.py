@@ -1,33 +1,11 @@
-import unittest
+# https://www.algoexpert.io/questions/youngest-common-ancestor
+# Graphs
 
 class AncestralTree:
     def __init__(self, name):
         self.name = name
         self.ancestor = None
 
-class AncestralTree(AncestralTree):
-    def addDescendants(self, *descendants):
-        for descendant in descendants:
-            descendant.ancestor = self
-
-def new_trees():
-    ancestralTrees = {}
-    for letter in list("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
-        ancestralTrees[letter] = AncestralTree(letter)
-    return ancestralTrees
-
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        trees = new_trees()
-        trees["A"].addDescendants(trees["B"], trees["C"])
-        trees["B"].addDescendants(trees["D"], trees["E"])
-        trees["D"].addDescendants(trees["H"], trees["I"])
-        trees["C"].addDescendants(trees["F"], trees["G"])
-
-        yca = getYoungestCommonAncestor(trees["A"], trees["E"], trees["I"])
-        self.assertTrue(yca == trees["B"])
-        print("Test Case: Passed")
-        
 """O(d) Time and O(d) Space: where d is the depth of the ancestor tree"""
 def getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo):
     # keep track of visited nodes in a hash_map
@@ -86,8 +64,44 @@ def backtrackAncestralTree(lowerDescendant, higherDescendant, diff):
         higherDescendant = higherDescendant.ancestor
     return lowerDescendant
 
+
+
+import unittest
+class AncestralTree(AncestralTree):
+    def addDescendants(self, *descendants):
+        for descendant in descendants:
+            descendant.ancestor = self
+
+
+def new_trees():
+    ancestralTrees = {}
+    for letter in list("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
+        ancestralTrees[letter] = AncestralTree(letter)
+    return ancestralTrees
+
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        trees = new_trees()
+        trees["A"].addDescendants(trees["B"], trees["C"])
+        trees["B"].addDescendants(trees["D"], trees["E"])
+        trees["D"].addDescendants(trees["H"], trees["I"])
+        trees["C"].addDescendants(trees["F"], trees["G"])
+
+        yca = getYoungestCommonAncestor(trees["A"], trees["E"], trees["I"])
+        self.assertTrue(yca == trees["B"])
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
+'''
 
-# Kunal Wadhwa  
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

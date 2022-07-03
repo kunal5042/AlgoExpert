@@ -1,16 +1,5 @@
-import unittest
-
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        trie = SuffixTrie("babc")
-        expected = {
-            "c": {"*": True},
-            "b": {"c": {"*": True}, "a": {"b": {"c": {"*": True}}}},
-            "a": {"b": {"c": {"*": True}}},
-        }
-        self.assertEqual(trie.root, expected)
-        self.assertTrue(trie.contains("abc"))
-        print("Test Case: Passed")
+# https://www.algoexpert.io/questions/suffix-trie-construction
+# Tries
 
 class SuffixTrie:
     def __init__(self, string):
@@ -56,8 +45,31 @@ class SuffixTrie:
         # we have to check if the current_node has endSymbol or not
         return self.endSymbol in current_node
 
+
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        trie = SuffixTrie("babc")
+        expected = {
+            "c": {"*": True},
+            "b": {"c": {"*": True}, "a": {"b": {"c": {"*": True}}}},
+            "a": {"b": {"c": {"*": True}}},
+        }
+        self.assertEqual(trie.root, expected)
+        self.assertTrue(trie.contains("abc"))
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
+'''
 
-# Kunal Wadhwa  
+# Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''

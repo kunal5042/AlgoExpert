@@ -1,6 +1,7 @@
 # https://www.algoexpert.io/questions/monotonic-array
 # Arrays
 
+'''O(n) Time and O(1) Space'''
 def isMonotonic(array):
 	non_increasing, non_decreasing = True, True
 	
@@ -13,6 +14,8 @@ def isMonotonic(array):
 	return non_increasing or non_decreasing
 
 
+
+
 import unittest
 class TestProgram(unittest.TestCase):
     def test_case_1(self):
@@ -22,13 +25,13 @@ class TestProgram(unittest.TestCase):
         self.assertEqual(actual, expected)
         print("Test Case: Passed")
 
-
 if __name__ == "__main__":
     test = TestProgram()
     test.test_case_1()
 '''
 
 # Kunal Wadhwa
+
 # GitHub     : https://github.com/kunal5042
 # LeetCode   : https://leetcode.com/kunal5042/
 # HackerRank : https://www.hackerrank.com/kunalwadhwa_cs

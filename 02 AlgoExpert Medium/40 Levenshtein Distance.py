@@ -1,11 +1,7 @@
-import unittest
+# https://www.algoexpert.io/questions/levenshtein-distance
+# Dynamic Programming
 
-
-class TestProgram(unittest.TestCase):
-    def test_case_1(self):
-        self.assertEqual(levenshteinDistance("abc", "yabd"), 2)
-        print("Test Case: Passed")
-
+'''O(nm) time | O(min(n, m)) space - where n and m are the lengths of the two input strings'''
 def levenshteinDistance(str1, str2):
     # 2 matrix set up
     edits = [[x for x in range(len(str1) + 1)] for y in range(len(str2) + 1)]
@@ -25,8 +21,23 @@ def levenshteinDistance(str1, str2):
     return edits[-1][-1]
 
 
+
+import unittest
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        self.assertEqual(levenshteinDistance("abc", "yabd"), 2)
+        print("Test Case: Passed")
+
 if __name__ == "__main__":
-    tester = TestProgram()
-    tester.test_case_1()
+    test = TestProgram()
+    test.test_case_1()
+'''
 
 # Kunal Wadhwa
+
+# GitHub     : https://github.com/kunal5042
+# LeetCode   : https://leetcode.com/kunal5042/
+# HackerRank : https://www.hackerrank.com/kunalwadhwa_cs
+# LinkedIn   : https://www.linkedin.com/in/kunal5042/
+
+'''
