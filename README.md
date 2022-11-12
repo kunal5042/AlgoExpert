@@ -1,7 +1,5 @@
 # :star: AlgoExpert
- ![GitHub repo size](https://img.shields.io/github/repo-size/kunal5042/AlgoExpert)
- [![Generic badge](https://img.shields.io/badge/lang-python-yellow.svg)](https://www.python.org/)
- [![Generic badge](https://img.shields.io/badge/last%20updated-28--08--2021-pink)](https://github.com/kunal5042/AlgoExpert)
+ [![Generic badge](https://img.shields.io/badge/lang-python-blue.svg)](https://www.python.org/)
  
 **Description:** This is a collection of my solutions to [AlgoExpert Coding Interview](https://www.algoexpert.io/questions) questions. There are solutions for each problem statement including time and space complexity along with a unittest starter code.
 ![AlgoExpert cover image](https://github.com/das-jishu/algoexpert-data-structures-algorithms/blob/master/Images/algo-expert-cover.png?raw=true)
