@@ -1,3 +1,6 @@
+# https://www.algoexpert.io/questions/node-depths
+# Binary Trees
+
 '''Recursive approach'''
 def nodeDepths(root, depth=0):
 	if root is None: return 0
